@@ -20,11 +20,11 @@ function cartReducer(state, action) {
             console.log("Existing quantity:", existingItem.quantity); // 👈 Log
             const updatedItem = {
                 ...existingItem,
-                quantity: existingItem.quantity + 1
+                quantity: existingItem.quantity + 1,
             };
             updatedItems[existingCartItemIndex] = updatedItem;
         } else {
-            updatedItems.push({ ...action.item, quantity: 1 }); // ✅ quantity sempre inizializzato
+            updatedItems.push({ ...action.item, quantity: 1 }); 
         }
 
         return {...state, items: updatedItems}; 
